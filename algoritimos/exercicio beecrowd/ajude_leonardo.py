@@ -1,5 +1,5 @@
 
-qtd_armas = int(input())
+qtd_armas = int(input('QUANTIDADE DE ARMAS: '))
 qtd = 0 
 armas = {'HANDGUN':2, 'RED9':3.5,'BLACKTAIL':3.5,'MATILDA':2,'HANDCANNON':60,'STRIKER':12,'TMP':1.5,'RIFLE':12}
 monstros = {'GANADOS' :40, 'COBRAS':50 ,'ZEALOT':75, 'COLMILLOS':60, 'GARRADOR':125, 'LASPLAGAS':100, 'GATLINGMAN':150, 'REGENERATOR':250, 'ELGIGANTE':500, 'DR.SALVADOR':350}
@@ -9,20 +9,20 @@ dano_causado = 0
 qtd = 0 
 
 while qtd != qtd_armas:
-    entrada = input().split(' ')
+    entrada = input('ARMAS/MUNIÇÃO: ').split(' ')
     balas_utilizadas += int(entrada[1])
     dano_causado += int(entrada[1])*armas[entrada[0]]
     qtd +=1
 
 vida_monstros = 0 
-qtd_monstros = int(input())
+qtd_monstros = int(input('QUANTIDADE MONSTROS: '))
 qtd = 0 
 while qtd != qtd_monstros:
-    entrada_monstro = input().split(' ')
+    entrada_monstro = input('MONSTRO/QUANTIDADE INDIVIDUAL: ').split(' ')
     vida_monstros += int(entrada_monstro[1])*monstros[entrada_monstro[0]]
     qtd +=1
 
-qtd_balas = int(input())
+qtd_balas = int(input('QUANTIDADE DE BALAS QUE PODEM SER GASTAS: '))
 
 print()
 if qtd_balas > balas_utilizadas and vida_monstros <= dano_causado:
